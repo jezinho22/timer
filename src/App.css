@@ -1,0 +1,49 @@
+body {
+  width: 1500px;
+  background-color: blueviolet;
+}
+
+.big-image {
+  display: block;
+  height: 95vh;
+  margin: auto;
+  border: 5px solid blue;
+}
+
+.cover-container {
+  position: absolute;
+  z-index: 10;
+  top:0;
+  left:0;
+  display: flex;
+  flex-wrap: wrap;
+  
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.cover-cell {
+  background-color: tomato;
+  margin: 0;
+  text-align: "center";
+  height: 200px;
+  flex-grow: 1;
+}
+
+.opaque-tile {
+  opacity: 1
+}
+.transparent-tile {
+  opacity: 0
+}
+.cover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 100;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;  
+}
