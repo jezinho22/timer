@@ -1,5 +1,5 @@
 
-export default function CoverCell({opaque}) {
+export default function CoverCell({row, opaque}) {
 
     const cellStyle = {
         // width: "3.3%",
@@ -7,6 +7,7 @@ export default function CoverCell({opaque}) {
     }
 
   return (
+
     <div className={`cover-cell ${opaque}`}>C</div>
   )
 }
