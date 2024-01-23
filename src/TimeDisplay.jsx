@@ -1,8 +1,7 @@
-
-export default function TimeDisplay({time}) {
-
+import TimeForm from "./TimeForm"
+export default function TimeDisplay({ time }) {
 
   return (
-    <div>{time}</div>
+        <div>{Math.floor(time / 60)}:{time%60 < 10 ? '0' + time%60 : time%60}</div>
   )
 }

@@ -1,28 +1,76 @@
-body {
-  width: 1500px;
+html,body {
   background-color: blueviolet;
+  margin: 0;
+}
+
+.time-display {
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 15;
+
+}
+
+.time-display>div {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 8rem;
+  color:#2BD872;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3F1046;
+  font-size: 1rem;
+}
+form input[type='text'] {
+  height: 1.5rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 2px solid #3F1046;
+  border-radius: 5px;
+}
+form input[type='submit'] {
+  height: 1.8rem;
+  margin: 1rem;
+  border: 2px solid green;
+  background-color: #2BD872;
+  border-radius: 5px;
+}
+.img-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .big-image {
-  display: block;
-  height: 100vh;
-  overflow-x: hidden;
-  /* margin: auto; */
-  /* top: 5%;
-  left:5%; */
-  border: 5px solid blue;
+  position: absolute;
+  width: 100vw;
+  overflow-y: hidden;
+  object-fit: none;
+  object-position: center;
 }
 
 .cover-container {
   position: absolute;
   z-index: 10;
-  /* top:0;
-  left:0; */
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-
-  width: 100vw;
-  height: 100vh;
 }
 
 .cover-container > div{
@@ -31,26 +79,18 @@ body {
 
 }
 .cover-cell {
-  background-color: tomato;
+  background-color: #3F1046;
   margin: 0;
   text-align: "center";
-  flex-grow: 1
+  flex-grow: 15;
 }
 
 .opaque-tile {
-  /* opacity: 1 */
+  opacity: 0
 }
 .transparent-tile {
-  opacity: 0;
+  opacity: 100;
   transition-timing-function: linear;
   transition: opacity 1s;
 }
-.cover-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: black;
-  height: 100vh;
-  width: 100vw;
-  z-index: 100;  
-}
+
