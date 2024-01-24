@@ -11,6 +11,7 @@ function App() {
   const [time, setTime] = useState(0)
   const [form, setForm] = useState({mins:'', secs:''})
   const [steps, setSteps] = useState([])
+  const [bground, setBground] = useState("")
 
   // manage form
 function handleChange(event){
@@ -22,6 +23,8 @@ function handleSubmit (event){
   const duration = (form.mins * 60)
   setRowArray(Array(duration/30).fill(0).map(()=>Array(30).fill("opaque-tile")))
   setTime(duration)
+  setBground(event.target.bground.value)
+  console.log(event)
   accelerate(duration)
 }
 
@@ -113,7 +116,7 @@ function getRandomCell(randomRowIndex) {
 
     <div className="img-container">
       <div className="image">
-        <img className="big-image" src="coffee2.jpg" alt="cup of coffee" />
+        <img className="big-image" src={bground} alt="cup of coffee" />
       </div>
       <div className = "cover-container">
           {rowArray.map((item, index) => (
