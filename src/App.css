@@ -1,6 +1,7 @@
 html,body {
   background-color: blueviolet;
   margin: 0;
+  font-family: 'Varela round', sans-serif;
 }
 
 .time-display {
@@ -24,16 +25,22 @@ html,body {
 }
 
 .time-display>div {
-  font-family: 'Varela Round', sans-serif;
   font-size: 8rem;
   color:#2BD872;
 }
 form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #3F1046;
   font-size: 1rem;
+}
+
+form div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 form input[type='text'] {
   height: 1.5rem;
@@ -49,6 +56,12 @@ form input[type='submit'] {
   border: 2px solid green;
   background-color: #2BD872;
   border-radius: 5px;
+}
+form select {
+  min-width: 100px;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  padding: 0.25rem;
 }
 .img-container {
   width: 100vw;
