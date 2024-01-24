@@ -15,7 +15,7 @@ html,body {
   width: 400px;
   height: 300px;
   position: absolute;
-  top:50%;
+  top:25%;
   left:50%;
   transform: translate(-50%, -50%);
 
@@ -37,6 +37,7 @@ form {
 }
 form input[type='text'] {
   height: 1.5rem;
+  font-size: 1.5rem;
   margin: 1rem;
   padding: 0.5rem;
   border: 2px solid #3F1046;
